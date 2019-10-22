@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-7i-p1D">
-                                <rect key="frame" x="186.5" y="191" width="207" height="245.5"/>
+                                <rect key="frame" x="62" y="150" width="290" height="327"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="viW-CW-UXf">
-                                        <rect key="frame" x="0.0" y="28" width="207" height="40"/>
+                                        <rect key="frame" x="0.0" y="28" width="290" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="viW-CW-UXf" id="1Ao-Xu-UBz">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,14 +36,14 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mau-mv-eps">
-                                <rect key="frame" x="323.5" y="456.5" width="70" height="30"/>
+                                <rect key="frame" x="282" y="497" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="PTF-zI-844"/>
                                     <constraint firstAttribute="height" constant="30" id="bll-T5-0nd"/>
                                 </constraints>
                                 <state key="normal" title="⇧ scroll"/>
                                 <connections>
-                                    <action selector="addCellBtnDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMD-ZT-qf9"/>
+                                    <action selector="addCellBtnDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVt-mi-AIX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,9 +52,9 @@
                             <constraint firstItem="mau-mv-eps" firstAttribute="top" secondItem="ol6-7i-p1D" secondAttribute="bottom" constant="20" id="1FS-6N-fZi"/>
                             <constraint firstItem="ol6-7i-p1D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="AoA-Jq-kvz"/>
                             <constraint firstItem="mau-mv-eps" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="OMq-fa-Zzu"/>
-                            <constraint firstItem="ol6-7i-p1D" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="Rtc-8c-kVO"/>
-                            <constraint firstItem="ol6-7i-p1D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.4" id="UuT-Vc-v5D"/>
-                            <constraint firstItem="ol6-7i-p1D" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="WXG-Rx-W58"/>
+                            <constraint firstItem="ol6-7i-p1D" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.4" id="Rtc-8c-kVO"/>
+                            <constraint firstItem="ol6-7i-p1D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UuT-Vc-v5D"/>
+                            <constraint firstItem="ol6-7i-p1D" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="WXG-Rx-W58"/>
                             <constraint firstItem="mau-mv-eps" firstAttribute="trailing" secondItem="ol6-7i-p1D" secondAttribute="trailing" id="yoO-sz-cFq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

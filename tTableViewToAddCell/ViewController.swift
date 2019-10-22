@@ -24,8 +24,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func scroll(_ sender: Any) {
         
-        let offset = CGPoint(x: 0.0, y: 40.0)
+        //let offsetY: CGFloat = 40.0
+        //tTableView.contentOffset.y += offsetY
+        
+        let offsetY = tTableView.contentOffset.y
+        
+        let offset = CGPoint(x: 0.0, y: offsetY + 40)
         tTableView.setContentOffset(offset, animated: true)
+        
         
     }
     
@@ -50,8 +56,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if lastCellMaxY + 40 > tTableViewMaxY {
         
             // スクロール量を求める
-            let offsetY: CGFloat = 40 - (tTableViewMaxY - lastCellMaxY) + 0.5
+            let offsetY: CGFloat = (lastCellMaxY + 40) - tTableViewMaxY + 0.5
         
+            //let offsetY = tTableView.contentOffset.y
+                   
+            //let offset = CGPoint(x: 0.0, y: offsetY + 40)
+            
+            
             print("------------------------------------------------")
             print("### offsetY:", offsetY)
             print("### before tTableView.contentOffset.y:", tTableView.contentOffset.y)
@@ -59,6 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             //// スクロール完了後にセルを追加する
             UIView.animate(withDuration: 0.6, animations: {
                 self.tTableView.contentOffset.y += offsetY
+                //self.tTableView.setContentOffset(offset, animated: false)
             }){(finished) in
                 print("### after tTableView.contentOffset.y:", self.tTableView.contentOffset.y)
                 self.tTableView.insertRows(at: [addCellIndexPath], with: .right)
